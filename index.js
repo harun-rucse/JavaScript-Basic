@@ -103,3 +103,66 @@ const anne = {
 
 // This point to the max object
 anne.calcAge();
+
+
+console.log('--------------THIS VARIABLE IN ARROW FUNCTION--------------');
+
+/*
+ * in Arrow function share the lexical 'this' keyword of its surrounding
+ */
+
+// ES5
+const box5 = {
+    position: 1,
+    color: 'green',
+    clickMe: function () {
+        // Here 'this' variable point to the box object
+        console.log(this);
+
+        /*
+         * To get the box object in this annonimous function then assign 'this' in another variable(self)
+         * Then self variable point to the box object
+         * Kind of small [hack]
+         */
+        const self = this;
+
+        document.querySelector('.box-green').addEventListener('click', function () {
+            //This annonimous function is regular function so here 'this' does not point box object
+            alert(`This is number ${self.position} box and its color is ${self.color}`);
+        });
+    }
+}
+
+//box5.clickMe();
+
+// ES6
+const box6 = {
+    position: 1,
+    color: 'green',
+    clickMe: function () {
+        // Here 'this' variable point to the box object so the down arrow function can share 'this' variable
+        console.log(this);
+
+        document.querySelector('.box-green').addEventListener('click', () => {
+            //This arrow function can access 'this' keyword of it surrounding
+            alert(`This is number ${this.position} box and its color is ${this.color}`);
+        });
+    }
+}
+
+box6.clickMe();
+
+/*
+ES6 If we use arrow function that attatch with an object then 'this' variable does not point to the object. 'this' point to its surrounding which is window object
+*/
+
+const box = {
+    position: 2,
+    color: 'blue',
+    clickMe: () => {
+        // Here 'this' point window object because arrow function share 'this' of its surrounding which is window
+        console.log(this);
+    }
+}
+
+box.clickMe();
