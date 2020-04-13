@@ -166,3 +166,45 @@ const box = {
 }
 
 box.clickMe();
+
+////////////////////////////////////////
+console.log('--------------MAP OF ES6--------------');
+
+const question = new Map();
+
+question.set('question', 'Which is the official name of the latest major JavaScript version?');
+question.set(1, 'ES5');
+question.set(2, 'ES6');
+question.set(3, 'ES2015');
+question.set(4, 'ES7');
+question.set('correct', 3);
+question.set(true, 'Congratulation! this is the right answer');
+question.set(false, 'Wrong answer! Plese try again.');
+
+
+//console.log(question.get('question'));
+//console.log(question.size);
+//
+//if (question.has(4)) {
+//    question.delete(4);
+//}
+//console.log(question.size);
+
+//question.clear();
+
+////////////////////////////////////////
+console.log('--------------Simple quize app--------------');
+
+// Print the question
+console.log(question.get('question'));
+
+// Print the option
+question.forEach((value, key) => {
+    if (typeof (key) === 'number')
+        console.log(`Answer ${key}: ${value}`);
+});
+
+const ans = parseInt(prompt('Write your answer'));
+
+// Print if the answer is correct or wrong
+console.log(question.get(ans === question.get('correct')));
