@@ -16,3 +16,15 @@ yearOfBirth.forEach(el => {
 
     console.log(age);
 });
+
+// map function/loop
+// map loop get a callback function with parameter [currElement, currIndex, fullArray ] and also this return an array
+yearOfBirth.map((el, index, entierArr) => {
+    console.log(el);
+    console.log(index);
+    console.log(entierArr);
+});
+
+const ages = yearOfBirth.map(el => new Date().getFullYear() - el);
+
+console.log(ages);
