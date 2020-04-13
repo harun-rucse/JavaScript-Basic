@@ -1,0 +1,58 @@
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #000;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+}
+
+.box {
+    width: 300px;
+    height: 80px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    margin-left: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+
+.box-green {
+    background-color: green;
+}
+
+.box-blue {
+    background-color: blue;
+}
+
+.box-red {
+    background-color: red;
+}
+
+.social {
+    margin-top: 20px;
+    border: 2px solid #19bf7f;
+    font-size: 130%;
+    margin-bottom: 150px;
+}
+
+.btn-click {
+    background: #e0531f;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 20px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 320px
+}
+
+.social a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    color: red;
+    border-bottom: 1px solid #000;
+}
