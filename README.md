@@ -13,15 +13,16 @@ At an end-of-year meeting, your boss wants a final report with the following:
 5. Size classification of all streets: tiny/small/normal/big/huge. If the size is unknown, the default is normal
 All the report data should be printed to the console.
 HINT: Use some of the ES6 features: classes, subclasses, template strings, default parameters, maps, arrow functions, destructuring, etc.
-
-####//////////////////Park Information////////////////////////
+<pre>
+## -------------------- Park Information --------------------
     Parks Name    Build Year   park area   number of tree
 1) Green Park      1987          0.2            215
-1) National Park   1894          2.9            3541
-1) Oak Park        1953          0.4            949
+2) National Park   1894          2.9            3541
+3) Oak Park        1953          0.4            949
 
-####//////////////////Street Information////////////////////////
+## -------------------- Street Information --------------------
     Street Name        Build Year  street length    street size
 1) Evergreen Street       1999            1.1              big
-1) 4th Street             2015            0.8               -
-1) Sunset Boulevard       1982            2.5              huge
+2) 4th Street             2015            0.8               -
+3) Sunset Boulevard       1982            2.5              huge
+</pre>
